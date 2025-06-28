@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>USDT (Bluff) Viewer</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .price {
+      font-size: 30px;
+      color: #1abc9c;
+      margin-top: 10px;
+    }
+    .logo {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/Mahmud8432/bluff-token-viewer/main/logo.png" class="logo" />
+    <h2>USDT (Bluff Token)</h2>
+    <div class="price" id="price">$1.00</div>
+    <p>Simulated Market Chart</p>
+  </div>
+
+  <script>
+    function updatePrice() {
+      let base = 1;
+      let fluctuation = (Math.random() - 0.5) * 0.1;
+      let newPrice = (base + fluctuation).toFixed(4);
+      document.getElementById("price").innerText = `$${newPrice}`;
+    }
+    setInterval(updatePrice, 2000);
+  </script>
+</body>
+</html>
