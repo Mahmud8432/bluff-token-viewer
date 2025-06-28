@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.token-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.token-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.token-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.token-symbol {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.token-balance {
+  font-size: 22px;
+  margin-top: 10px;
+  color: green;
+}
