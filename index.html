@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>USDT (Bluff) Viewer</title>
+  <title>USDT Bluff Token Viewer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       font-family: Arial;
-      background: #f4f4f4;
       text-align: center;
       padding: 50px;
+      background: #f5f5f5;
     }
-    .card {
+    .token-card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      padding: 20px;
       max-width: 400px;
       margin: auto;
-    }
-    .price {
-      font-size: 30px;
-      color: #1abc9c;
-      margin-top: 10px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     .logo {
-      width: 100px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    .price {
+      font-size: 28px;
+      margin: 10px 0;
+      color: green;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/Mahmud8432/bluff-token-viewer/main/logo.png" class="logo" />
-    <h2>USDT (Bluff Token)</h2>
+  <div class="token-card">
+    <img class="logo" src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT Logo" />
+    <h2>USDT (Bluff)</h2>
     <div class="price" id="price">$1.00</div>
-    <p>Simulated Market Chart</p>
+    <p>Total Supply: 10,000,000</p>
+    <p>Contract: <code>0x2d373E4447E7765E0474c04fd673314495e4aa44</code></p>
+    <small>Powered by Rayhan's Assistant</small>
   </div>
 
   <script>
-    function updatePrice() {
-      let base = 1;
-      let fluctuation = (Math.random() - 0.5) * 0.1;
-      let newPrice = (base + fluctuation).toFixed(4);
-      document.getElementById("price").innerText = `$${newPrice}`;
+    function randomPrice() {
+      const price = (0.98 + Math.random() * 0.04).toFixed(4);
+      document.getElementById('price').textContent = '$' + price;
     }
-    setInterval(updatePrice, 2000);
+    setInterval(randomPrice, 2000);
   </script>
 </body>
 </html>
